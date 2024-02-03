@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: papayawhip;
+}
+
+.post-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+    max-width: 800px;
+}
+
+.post-card {
+    padding: auto 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.post-card hr {
+    background-color: black;
+    height: 1px;
+    margin: auto 1rem;
+}
