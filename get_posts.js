@@ -14,7 +14,5 @@ const getAllPosts = () =>{
 
     return posts
 }
-// createPosts(posts)
-// addHomePage(posts)
 
 module.exports = getAllPosts
