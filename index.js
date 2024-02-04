@@ -1,8 +1,9 @@
-const getAllPosts = require("./app")
+const getAllPosts = require("./get_posts")
 const config = require("./config")
 const path = require("path")
 const express = require("express")
 const app = express()
+const serverless = require("serverless-http")
 
 // using an expernal css file
 app.use('/public', express.static('public'))
@@ -26,3 +27,4 @@ app.get("/:path", (req, res) => {
 })
 
 app.listen(3000)
+module.exports.handler = serverless(app)
