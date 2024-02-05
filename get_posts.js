@@ -4,9 +4,8 @@ const {createPost} = require('./create_posts')
 const path = require("path")
 
 const getAllPosts = () =>{
-    console.log(__dirname)
     const posts = fs
-        .readdirSync(config.dev.postsdir)
+        .readdirSync(path.join(__dirname, config.dev.postsdir))
         .map(post => post.slice(0, -3))
         .map(post => createPost(post))
         

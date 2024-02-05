@@ -1,15 +1,15 @@
 const express = require("express")
-const app = express()
 const router = express.Router()
-const config = require("../config")
-const posts = require('../get_posts')
-const serverless = require('serverless-http')
+const config = require("./config")
+const posts = require('./get_posts')
+const port = process.env.port || 5001
+const app = express()
 
 app.set('view engine', 'ejs')
 app.use('public', express.static('public'))
 
 router.get('/', (req, res) => {
-    res.render("pages/index")
+    res.render("pages/index", {posts: posts(), config: config})
 })
 
 router.get("/:path", (req, res) => {
@@ -23,5 +23,4 @@ router.get("/:path", (req, res) => {
 
 app.use('/', router)
 
-app.listen(7500)
-module.exports.handler = serverless(app)
+app.listen(port)
