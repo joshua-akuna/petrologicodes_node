@@ -6,7 +6,7 @@ const path = require("path")
 const getAllPosts = () =>{
     console.log(__dirname)
     const posts = fs
-        .readdirSync(path.join(__dirname, config.dev.postsdir))
+        .readdirSync(config.dev.postsdir)
         .map(post => post.slice(0, -3))
         .map(post => createPost(post))
         

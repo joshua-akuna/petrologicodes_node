@@ -9,7 +9,7 @@ app.set('view engine', 'ejs')
 app.use('public', express.static('public'))
 
 router.get('/', (req, res) => {
-    res.render("pages/index", {posts: posts(), config: config})
+    res.send("Hello Joshua")
 })
 
 router.get("/:path", (req, res) => {
