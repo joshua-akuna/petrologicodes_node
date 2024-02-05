@@ -6,7 +6,7 @@ const port = process.env.port || 5001
 const app = express()
 
 app.set('view engine', 'ejs')
-app.use('public', express.static('public'))
+app.use('/public', express.static('public'))
 
 router.get('/', (req, res) => {
     res.render("pages/index", {posts: posts(), config: config})

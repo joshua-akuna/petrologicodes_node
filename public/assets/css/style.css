@@ -4,19 +4,32 @@
     line-height: 1.5rem;
 }
 
-body {
+.home-body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.post-body, .home-body {
     background-color: papayawhip;
+}
+
+.post-body { padding: 2rem; }
+
+.post-body div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .post-cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
     padding: 1.5rem;
     gap: 2rem;
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .post-card {
@@ -32,12 +45,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-height: 300px;
+    max-height: 250px;
     overflow: hidden;
 }
 
-.post-card hr {
-    background-color: black;
-    height: 1px;
-    margin: auto 1rem;
-}
+.post-card hr { background-color: black; height: 1px; margin: auto 1rem; }
+a { text-decoration: none; }
+p { font-size: 17px; }
