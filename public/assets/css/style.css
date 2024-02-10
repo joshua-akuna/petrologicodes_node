@@ -10,9 +10,7 @@
     align-items: center;
 }
 
-.post-body, .home-body {
-    background-color: papayawhip;
-}
+.post-body, .home-body { background-color: papayawhip; }
 
 .post-body { padding: 2rem; }
 
@@ -52,3 +50,4 @@
 .post-card hr { background-color: black; height: 1px; margin: auto 1rem; }
 a { text-decoration: none; }
 p { font-size: 17px; }
+
